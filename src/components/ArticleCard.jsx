@@ -22,8 +22,6 @@ const ArticleCard = () => {
     const isoDate = article.created_at;
     const localDateString = formatDate(isoDate);
 
-    console.log(article)
-
     if (err) return <p>Something went wrong...</p>
 
     return (
