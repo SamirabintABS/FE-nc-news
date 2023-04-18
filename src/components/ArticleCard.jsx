@@ -17,7 +17,7 @@ const ArticleCard = () => {
             .catch((err) => {
                 setErr(err);
             })
-    }, [])
+    }, [articleId.article_id])
 
     const isoDate = article.created_at;
     const localDateString = formatDate(isoDate);
@@ -27,12 +27,14 @@ const ArticleCard = () => {
     return (
         <div className="article-card">
             <h3>{article.title}</h3>
+            <p> <span>Author:</span> {article.author}</p>
             <img src={article.article_img_url} alt={`snapshot relating to ${article.title}`}></img>
-            <p>Author: {article.author}</p>
-            <p>Date and Time: {localDateString}</p>
-            <p>Topic: {article.topic}</p>
+            <p> <span> Created at:</span> {localDateString}</p>
+            <div>
+                <p> <span> Topic:</span> {article.topic}</p>
+                <p> <span> Votes:</span> {article.votes}</p>
+            </div>
             <p>{article.body}</p>
-            <p>Votes: {article.votes}</p>
         </div>
     )
 

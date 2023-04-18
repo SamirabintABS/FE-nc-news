@@ -6,14 +6,13 @@
     justify-content: center;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    font-weight: 600;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    border-radius: 0.25rem;
-    border: 2px solid #432f5c;
-    background: linear-gradient(90deg, rgba(129, 46, 231, 1) 18%, rgba(143, 143, 220, 1) 43%, rgba(92, 225, 230, 1) 88%);
-    color: #fff;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    background-color: $lightGreen;
+    color: black;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 

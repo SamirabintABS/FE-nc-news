@@ -1,0 +1,28 @@
+@import "./colorVariables.scss";
+@import "./button.scss";
+
+@mixin articlePreview {
+    border: 2px solid black;
+    background-color: $deepMagenta;
+    color: $floralWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    h3 {
+        background-color: inherit;
+        color: floralwhite;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    button {
+        @include button
+    }
+}
