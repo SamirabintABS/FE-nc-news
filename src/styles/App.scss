@@ -1,0 +1,223 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import "./mediaMixins.scss";
+
+// Color variables
+$primaryColor: #812ee7;
+$secondaryColor: #5ce1e6;
+
+.App {
+  @include desktop {
+    .article-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 22px;
+
+      .article-preview {
+        background-color: #F5F5F5;
+        width: calc(25% - 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+        h3 {
+          background-color: inherit;
+          color: $primaryColor;
+        }
+
+        img {
+          width: 80%;
+        }
+
+        h4 {}
+
+        p {}
+
+        button {
+          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
+        }
+      }
+    }
+  }
+
+  @include laptop {
+    .article-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 20px;
+
+      .article-preview {
+        background-color: #F5F5F5;
+        width: calc(33% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+        h3 {
+          background-color: inherit;
+          color: $primaryColor;
+        }
+
+        img {
+          width: 80%;
+        }
+
+        h4 {}
+
+        p {}
+
+        button {
+          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    .article-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 20px;
+
+      .article-preview {
+        background-color: #F5F5F5;
+        width: calc(50% - 11px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+        h3 {
+          background-color: inherit;
+          color: $primaryColor;
+        }
+
+        img {
+          width: 80%;
+        }
+
+        h4 {}
+
+        p {}
+
+        button {
+          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    .article-list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 20px;
+      gap: 25px;
+
+      .article-preview {
+        background-color: #F5F5F5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+        h3 {
+          background-color: inherit;
+          margin-bottom: 10px;
+          color: $primaryColor;
+        }
+
+        img {
+          width: 80%;
+        }
+
+        h4 {}
+
+        p {}
+
+        button {
+          cursor: pointer;
+          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
+        }
+      }
+    }
+  }
+
+}
+
+
+* {
+  background-color: white;
+  font-family: 'Roboto Mono', monospace;
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
+  padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  .nc-logo {
+    width: calc(250px - 10px);
+    cursor: pointer;
+    background-color: inherit;
+  }
+
+  .profile-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      height: 45px;
+    }
+  }
+}
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 30px 0;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.frog-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
