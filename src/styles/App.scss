@@ -7,6 +7,8 @@ $primaryColor: #812ee7;
 $secondaryColor: #5ce1e6;
 
 .App {
+  background-image: url("../images/wallpaper2.jpeg");
+
   @include desktop {
     .article-list {
       display: flex;
@@ -16,6 +18,7 @@ $secondaryColor: #5ce1e6;
       list-style: none;
       padding: 0;
       margin: 22px;
+      background: inherit;
 
       .article-preview {
         background-color: #F5F5F5;
@@ -26,7 +29,7 @@ $secondaryColor: #5ce1e6;
         align-items: center;
         padding: 20px;
         border-radius: 16px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 10px 15px 10px rgba(9, 9, 9, 0.2);
 
         h3 {
           background-color: inherit;
@@ -57,6 +60,7 @@ $secondaryColor: #5ce1e6;
       list-style: none;
       padding: 0;
       margin: 20px;
+      background: inherit;
 
       .article-preview {
         background-color: #F5F5F5;
@@ -98,6 +102,7 @@ $secondaryColor: #5ce1e6;
       list-style: none;
       padding: 0;
       margin: 20px;
+      background: inherit;
 
       .article-preview {
         background-color: #F5F5F5;
@@ -138,6 +143,7 @@ $secondaryColor: #5ce1e6;
       padding: 0;
       margin: 20px;
       gap: 25px;
+      background: inherit;
 
       .article-preview {
         background-color: #F5F5F5;
@@ -220,4 +226,5 @@ $secondaryColor: #5ce1e6;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  background: inherit;
 }

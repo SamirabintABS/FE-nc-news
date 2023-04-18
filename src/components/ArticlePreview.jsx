@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ArticlePreview = ({ articles }) => {
 
     return (
@@ -9,7 +11,9 @@ const ArticlePreview = ({ articles }) => {
                         <img src={article.article_img_url} alt={`snapshot relating to${article.title}`} />
                         <h4>Author:{article.author}</h4>
                         <p>Topic:{article.topic}</p>
-                        <button>Read full article</button>
+                        <Link to={`/${article.article_id}`}>
+                            <button>Read full article</button>
+                        </Link>
                     </li>
                 )
             })}
