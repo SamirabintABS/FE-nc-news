@@ -3,22 +3,15 @@ import './App.scss';
 import Navigation from './components/Navigation/Navigation.jsx';
 import Header from './components/Header';
 import ArticleList from './components/ArticlesList';
-import { useState } from 'react';
 
 function App() {
 
-  const [articles, setArticles] = useState([]);
-
   return (
     <div className="App">
+      <Navigation />
+      <Header />
       <Routes>
-        <Route path="/" element={
-          <>
-            <Navigation />
-            <Header />
-            <ArticleList articles={articles} setArticles={setArticles} />
-          </>
-        } />
+        <Route path="/" element={<ArticleList />} />
       </Routes>
     </div>
   );

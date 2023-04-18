@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { getArticles } from "../Api";
 import ArticlePreview from "./ArticlePreview.jsx";
 
-const ArticleList = ({ articles, setArticles }) => {
-
+const ArticleList = () => {
+    const [articles, setArticles] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(false)
 

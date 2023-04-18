@@ -1,5 +1,5 @@
 const ArticlePreview = ({ articles }) => {
-    console.log(articles)
+
     return (
         <ul className="article-list">
             {articles.map((article) => {
