@@ -195,11 +195,16 @@ $secondaryColor: #5ce1e6;
   padding: 5px 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-  .nc-logo {
-    width: calc(250px - 10px);
-    cursor: pointer;
+  a {
     background-color: inherit;
+
+    .nc-logo {
+      width: calc(250px - 10px);
+      cursor: pointer;
+      background-color: transparent;
+    }
   }
+
 
   .profile-btn {
     background-color: transparent;
@@ -227,4 +232,13 @@ $secondaryColor: #5ce1e6;
   align-items: center;
   gap: 10px;
   background: inherit;
+
+  a {
+    color: black;
+    background: inherit;
+
+    .app-header {
+      background: inherit;
+    }
+  }
 }

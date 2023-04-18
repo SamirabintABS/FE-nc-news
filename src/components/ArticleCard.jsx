@@ -28,11 +28,11 @@ const ArticleCard = () => {
         <div>
             <h3>{article.title}</h3>
             <img src={article.article_img_url} alt={`snapshot relating to ${article.title}`}></img>
-            <p>Author:{article.author}</p>
-            <p>{localDateString}</p>
-            <p>Topic:{article.topic}</p>
+            <p>Author: {article.author}</p>
+            <p>Date and Time: {localDateString}</p>
+            <p>Topic: {article.topic}</p>
             <p>{article.body}</p>
-            <p>Votes:{article.votes}</p>
+            <p>Votes: {article.votes}</p>
         </div>
     )
 
