@@ -7,29 +7,121 @@ $primaryColor: #812ee7;
 $secondaryColor: #5ce1e6;
 
 .App {
-  @include desktop {}
-
-  @include laptop {}
-
-  @include tablet {
+  @include desktop {
     .article-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 20px;
 
       .article-preview {
-        h3 {}
+        background-color: #F5F5F5;
+        width: calc(22% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
 
-        img {}
+        h3 {
+          background-color: inherit;
+          color: $primaryColor;
+        }
+
+        img {
+          width: 80%;
+        }
 
         h4 {}
 
         p {}
 
-        button {}
+        button {
+          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
+        }
+      }
+    }
+  }
+
+  @include laptop {
+    .article-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 20px;
+
+      .article-preview {
+        background-color: #F5F5F5;
+        width: calc(33% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+
+        h3 {
+          background-color: inherit;
+          color: $primaryColor;
+        }
+
+        img {
+          width: 80%;
+        }
+
+        h4 {}
+
+        p {}
+
+        button {
+          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    .article-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 20px;
+
+      .article-preview {
+        background-color: #F5F5F5;
+        width: calc(50% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+
+        h3 {
+          background-color: inherit;
+          color: $primaryColor;
+        }
+
+        img {
+          width: 80%;
+        }
+
+        h4 {}
+
+        p {}
+
+        button {
+          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
+        }
       }
     }
   }
 
   @include mobile {
-
     .article-list {
       display: flex;
       flex-direction: column;
@@ -48,6 +140,7 @@ $secondaryColor: #5ce1e6;
         h3 {
           background-color: inherit;
           margin-bottom: 10px;
+          color: $primaryColor;
         }
 
         img {
@@ -60,11 +153,12 @@ $secondaryColor: #5ce1e6;
 
         button {
           cursor: pointer;
+          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
         }
       }
     }
-
   }
+
 }
 
 
@@ -73,12 +167,15 @@ $secondaryColor: #5ce1e6;
   font-family: 'Roboto Mono', monospace;
 }
 
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
   padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
   .nc-logo {
     width: calc(250px - 10px);
@@ -101,5 +198,6 @@ $secondaryColor: #5ce1e6;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
+  margin: 20px 0 30px 0;
+  ;
 }
