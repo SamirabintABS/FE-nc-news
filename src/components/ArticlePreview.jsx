@@ -9,8 +9,8 @@ const ArticlePreview = ({ articles }) => {
                     <li className="article-preview" key={article.article_id}>
                         <h3>{article.title}</h3>
                         <img src={article.article_img_url} alt={`snapshot relating to${article.title}`} />
-                        <h4>Author:{article.author}</h4>
-                        <p>Topic:{article.topic}</p>
+                        <h4>Author: {article.author}</h4>
+                        <h5>Topic: {article.topic}</h5>
                         <Link to={`/${article.article_id}`}>
                             <button>Read full article</button>
                         </Link>

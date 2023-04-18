@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import ncLogo from '../../images/Nc (1)-PhotoRoom (1).png'
+import ncLogo from '../../images/Nc (2)-PhotoRoom.png'
 
 const Navigation = () => {
     return (
