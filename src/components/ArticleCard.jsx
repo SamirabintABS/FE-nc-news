@@ -25,7 +25,7 @@ const ArticleCard = () => {
     if (err) return <p>Something went wrong...</p>
 
     return (
-        <div>
+        <div className="article-card">
             <h3>{article.title}</h3>
             <img src={article.article_img_url} alt={`snapshot relating to ${article.title}`}></img>
             <p>Author: {article.author}</p>
