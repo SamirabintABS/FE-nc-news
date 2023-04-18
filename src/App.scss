@@ -12,14 +12,14 @@ $secondaryColor: #5ce1e6;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 10px;
+      gap: 20px;
       list-style: none;
       padding: 0;
-      margin: 20px;
+      margin: 22px;
 
       .article-preview {
         background-color: #F5F5F5;
-        width: calc(22% - 20px);
+        width: calc(25% - 20px);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -88,18 +88,17 @@ $secondaryColor: #5ce1e6;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      gap: 10px;
+      gap: 20px;
       list-style: none;
       padding: 0;
       margin: 20px;
 
       .article-preview {
         background-color: #F5F5F5;
-        width: calc(50% - 20px);
+        width: calc(50% - 11px);
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
 
         h3 {
           background-color: inherit;
@@ -199,5 +198,4 @@ $secondaryColor: #5ce1e6;
   justify-content: center;
   align-items: center;
   margin: 20px 0 30px 0;
-  ;
 }
