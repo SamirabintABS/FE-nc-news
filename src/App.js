@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.scss';
+import './styles/App.scss';
 import Navigation from './components/Navigation/Navigation.jsx';
 import Header from './components/Header';
 import ArticleList from './components/ArticlesList';
