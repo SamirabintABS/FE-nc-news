@@ -1,198 +1,171 @@
 @import "~bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Patua+One&display=swap');
 @import "./mediaMixins.scss";
+@import "./colorVariables.scss";
+@import "./articleCard.scss";
+@import "./articlePreview.scss";
+@import "./articleList.scss";
 
-// Color variables
-$primaryColor: #812ee7;
-$secondaryColor: #5ce1e6;
+* {
+  font-family: 'Patua One', cursive;
+}
 
 .App {
+  display: flex;
+  flex-direction: column;
+  background-color: $linen;
+
   @include desktop {
     .article-list {
-      display: flex;
+      @include articleList;
       flex-wrap: wrap;
-      justify-content: space-between;
       gap: 20px;
-      list-style: none;
-      padding: 0;
       margin: 22px;
 
       .article-preview {
-        background-color: #F5F5F5;
+        @include articlePreview;
         width: calc(25% - 20px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        border-radius: 16px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-        h3 {
-          background-color: inherit;
-          color: $primaryColor;
-        }
-
-        img {
-          width: 80%;
-        }
-
-        h4 {}
-
-        p {}
-
-        button {
-          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
-        }
       }
     }
+
+    .article-card {
+      @include articleCard;
+      flex-direction: column;
+
+      h3 {
+        font-size: 2.2rem;
+      }
+
+      img {
+        width: 60%;
+      }
+
+      div {
+        justify-content: center;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+
   }
 
   @include laptop {
     .article-list {
-      display: flex;
+      @include articleList;
       flex-wrap: wrap;
-      justify-content: space-between;
       gap: 10px;
-      list-style: none;
-      padding: 0;
       margin: 20px;
 
       .article-preview {
-        background-color: #F5F5F5;
+        @include articlePreview;
         width: calc(33% - 20px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-        border-radius: 16px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-        h3 {
-          background-color: inherit;
-          color: $primaryColor;
-        }
+      }
+    }
 
-        img {
-          width: 80%;
-        }
+    .article-card {
+      @include articleCard;
 
-        h4 {}
+      h3 {
+        font-size: 2rem;
+      }
 
-        p {}
+      img {
+        width: 60%;
+      }
 
-        button {
-          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
-        }
+      div {
+        justify-content: center;
+      }
+
+      p {
+        font-size: 1.6rem;
       }
     }
   }
 
   @include tablet {
     .article-list {
-      display: flex;
+      @include articleList;
       flex-wrap: wrap;
-      justify-content: space-between;
       gap: 20px;
-      list-style: none;
-      padding: 0;
       margin: 20px;
 
       .article-preview {
-        background-color: #F5F5F5;
+        @include articlePreview;
         width: calc(50% - 11px);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        border-radius: 16px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-        h3 {
-          background-color: inherit;
-          color: $primaryColor;
-        }
+      }
+    }
 
-        img {
-          width: 80%;
-        }
+    .article-card {
+      @include articleCard;
 
-        h4 {}
+      h3 {
+        font-size: 2rem;
+      }
 
-        p {}
+      img {
+        width: 50%;
+      }
 
-        button {
-          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
-        }
+      div {
+        justify-content: center;
+      }
+
+      p {
+        font-size: 1.6rem;
       }
     }
   }
 
   @include mobile {
     .article-list {
-      display: flex;
+      @include articleList;
       flex-direction: column;
-      list-style: none;
-      padding: 0;
       margin: 20px;
       gap: 25px;
 
       .article-preview {
-        background-color: #F5F5F5;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include articlePreview;
+      }
+    }
+
+    .article-card {
+      @include articleCard;
+      flex-direction: column;
+
+      img {
+        width: 75%;
+      }
+
+      div {
         justify-content: space-between;
-        padding: 20px;
-        border-radius: 16px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-        h3 {
-          background-color: inherit;
-          margin-bottom: 10px;
-          color: $primaryColor;
-        }
-
-        img {
-          width: 80%;
-        }
-
-        h4 {}
-
-        p {}
-
-        button {
-          cursor: pointer;
-          background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
-        }
       }
     }
   }
 
 }
 
-
-* {
-  background-color: white;
-  font-family: 'Roboto Mono', monospace;
-}
-
-
-
+// Navbar styles
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(90deg, $secondaryColor 18%, rgba(99, 200, 222, 1) 37%, rgba(147, 172, 217, 1) 51%, rgba(143, 143, 220, 1) 68%, $primaryColor 88%);
+  background-color: $plum;
   padding: 5px 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-  .nc-logo {
-    width: calc(250px - 10px);
-    cursor: pointer;
+  a {
     background-color: inherit;
+
+    .nc-logo {
+      width: calc(250px - 10px);
+      cursor: pointer;
+      background-color: transparent;
+    }
   }
 
   .profile-btn {
@@ -202,17 +175,20 @@ $secondaryColor: #5ce1e6;
 
     svg {
       height: 45px;
+      filter: invert(100%);
     }
   }
 }
 
+// App header styles
 .app-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 30px 0;
+  margin: 20px 0 10px 0;
   text-decoration: underline;
   font-weight: bold;
+  font-family: 'Patua One', cursive;
 }
 
 .frog-header {
@@ -220,4 +196,30 @@ $secondaryColor: #5ce1e6;
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  a {
+    color: black;
+    background: inherit;
+  }
+}
+
+.standard-btn {
+  @include button;
+}
+
+.loading-frog {
+  animation: spin 1s infinite linear;
+
+
+  align-items: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

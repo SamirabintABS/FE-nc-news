@@ -1,0 +1,37 @@
+@import "./colorVariables.scss";
+
+@mixin button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid transparent;
+    background-color: $lightGreen;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+
+    &:hover,
+    &:focus {
+        background-color: $plum;
+        outline: none;
+        color: white;
+    }
+
+    &:active {
+        background-color: $plum;
+    }
+
+    &:disabled {
+        background-color: $plum 50%;
+        color: #777;
+        cursor: not-allowed;
+    }
+}
