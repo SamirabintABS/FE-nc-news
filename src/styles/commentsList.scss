@@ -1,0 +1,19 @@
+@import "./colorVariables.scss";
+
+@mixin commentsList {
+    overflow: scroll;
+    border-radius: 16px;
+    padding: 0;
+    list-style: none;
+    gap: 15px;
+    ;
+    display: flex;
+    flex-direction: column;
+
+    li {
+        background-color: $deepMagenta;
+        border-radius: 16px;
+        padding: 20px;
+        color: $floralWhite;
+    }
+}

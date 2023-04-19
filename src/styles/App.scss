@@ -5,6 +5,7 @@
 @import "./articleCard.scss";
 @import "./articlePreview.scss";
 @import "./articleList.scss";
+@import "./commentsList.scss";
 
 * {
   font-family: 'Patua One', cursive;
@@ -49,6 +50,11 @@
       }
     }
 
+    .comments-list {
+      @include commentsList;
+      height: 350px;
+    }
+
   }
 
   @include laptop {
@@ -83,6 +89,11 @@
       p {
         font-size: 1.6rem;
       }
+    }
+
+    .comments-list {
+      @include commentsList;
+      height: 300px;
     }
   }
 
@@ -119,6 +130,11 @@
         font-size: 1.6rem;
       }
     }
+
+    .comments-list {
+      @include commentsList;
+      height: 250px;
+    }
   }
 
   @include mobile {
@@ -145,7 +161,13 @@
         justify-content: space-between;
       }
     }
+
+    .comments-list {
+      @include commentsList;
+      height: 300px;
+    }
   }
+
 
 }
 
