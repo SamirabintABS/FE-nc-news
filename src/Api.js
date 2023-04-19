@@ -24,3 +24,13 @@ export const getArticlesById = (id) => {
             console.log(err)
         })
 }
+
+export const getCommentsById = (id) => {
+    return newsApi
+        .get(`/articles/${id}/comments`)
+        .then((res) => {
+            return res.data.comments
+        }).catch((err) => {
+            console.log(err);
+        })
+}

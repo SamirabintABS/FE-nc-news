@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getArticlesById } from "../Api";
 import formatDate from "../utils/utils.js";
 import frogFace from "../images/frog-face.png";
+import CommentsList from "./CommentsList";
 
 const ArticleCard = () => {
     const [article, setArticle] = useState([]);
@@ -37,7 +38,7 @@ const ArticleCard = () => {
                     <img className="loading-frog" src={frogFace} alt="Loading" />
                 )
             }
-            <div className="article-card">
+            <main className="article-card" >
                 <h3>{article.title}</h3>
                 <p> <span>Author:</span> {article.author}</p>
                 <img src={article.article_img_url} alt={`snapshot relating to ${article.title}`}></img>
@@ -47,7 +48,8 @@ const ArticleCard = () => {
                     <p> <span> Votes:</span> {article.votes}</p>
                 </div>
                 <p>{article.body}</p>
-            </div>
+                <CommentsList articleId={articleId} />
+            </main>
         </>
     )
 
