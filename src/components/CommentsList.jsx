@@ -23,7 +23,7 @@ const CommentsList = ({ articleId }) => {
             <ul>
                 {comments.map((comment) => {
                     return (
-                        <li key={comment.article_id}>
+                        <li key={comment.comment_id}>
                             <div>
                                 <p>{comment.author}</p>
                                 <p>{comment.created_at}</p>
