@@ -10,6 +10,11 @@
     display: flex;
     flex-direction: column;
 
+    h3 {
+        display: flex;
+        justify-content: flex-start;
+    }
+
     li {
         background-color: $deepMagenta;
         border-radius: 16px;

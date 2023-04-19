@@ -37,8 +37,12 @@
         font-size: 2.2rem;
       }
 
-      img {
-        width: 60%;
+      .text-img-container {
+        img {
+          width: 60%;
+          float: left;
+          margin-left: 20px;
+        }
       }
 
       div {
@@ -78,8 +82,12 @@
         font-size: 2rem;
       }
 
-      img {
-        width: 60%;
+      .text-img-container {
+        img {
+          width: 60%;
+          float: left;
+          margin-left: 20px;
+        }
       }
 
       div {
@@ -118,8 +126,14 @@
         font-size: 2rem;
       }
 
-      img {
-        width: 50%;
+      .text-img-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        img {
+          width: 100%;
+          float: none;
+        }
       }
 
       div {
@@ -153,8 +167,14 @@
       @include articleCard;
       flex-direction: column;
 
-      img {
-        width: 75%;
+      .text-img-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        img {
+          width: 100%;
+          float: none;
+        }
       }
 
       div {

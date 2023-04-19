@@ -40,16 +40,21 @@ const ArticleCard = () => {
             }
             <main className="article-card" >
                 <h3>{article.title}</h3>
-                <div>
+                <div className="author-date-container">
                     <p> <span>Author:</span> {article.author}</p>
                     <p>{localDateString}</p>
                 </div>
-                <img src={article.article_img_url} alt={`snapshot relating to ${article.title}`}></img>
-                <div>
-                    <p> <span> Topic:</span> {article.topic}</p>
-                    <p> <span> Votes:</span> {article.votes}</p>
+                <div className="text-img-container">
+                    <div className="text-content">
+                        <div className="votes-topics-container">
+                            <p> <span> Topic:</span> {article.topic}</p>
+                            <p> <span> Votes:</span> {article.votes}</p>
+                        </div>
+                        <p>{article.body}</p>
+                    </div>
+                    <img src={article.article_img_url} alt={`snapshot relating to ${article.title}`}></img>
                 </div>
-                <p>{article.body}</p>
+
                 <CommentsList articleId={articleId} />
             </main>
         </>
