@@ -6,22 +6,28 @@ import formatDate from "../utils/utils.js";
 const ArticleCard = () => {
     const [article, setArticle] = useState([]);
     const [err, setErr] = useState(false)
+    const [loading, setLoading] = useState(true);
 
     const articleId = useParams();
 
     useEffect(() => {
+        setLoading(true);
+        setErr(false);
         getArticlesById(articleId.article_id)
             .then((data) => {
                 return setArticle(data)
             })
-            .catch((err) => {
-                setErr(err);
+            .catch(() => {
+                setErr(true);
+            }).finally(() => {
+                setLoading(false);
             })
     }, [articleId.article_id])
 
     const isoDate = article.created_at;
     const localDateString = formatDate(isoDate);
 
+    if (loading) return <p>Loading...</p>
     if (err) return <p>Something went wrong...</p>
 
     return (
