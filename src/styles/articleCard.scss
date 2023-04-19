@@ -1,7 +1,7 @@
 @import "./colorVariables.scss";
 
 @mixin articleCard {
-    background-color: $tertiaryColor;
+    background-color: $lightGreen;
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
@@ -10,32 +10,30 @@
     border-radius: 16px;
     box-shadow: 5px 10px 15px 10px rgba(9, 9, 9, 0.2);
     margin: 20px;
-    border: 3px solid $secondaryColor;
+    border: 3px solid transparent;
 
     h3 {
-        color: $primaryColor;
+        color: $deepMagenta;
         text-align: center;
     }
 
     img {
-        width: 75%;
         border-radius: 16px;
-        border: 3px solid $secondaryColor;
+        border: 3px solid $deepMagenta ;
         margin-bottom: 10px;
     }
 
     div {
         display: flex;
-        justify-content: space-between;
         width: 100%;
-        background-color: inherit;
     }
 
     p {
+        font-size: 1.2rem;
         padding: 10px;
 
         span {
-            color: $darkBlue;
+            color: $deepMagenta;
             font-weight: bold;
         }
     }

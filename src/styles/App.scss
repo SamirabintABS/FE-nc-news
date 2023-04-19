@@ -23,7 +23,27 @@
       .article-preview {
         @include articlePreview;
         width: calc(25% - 20px);
+      }
+    }
 
+    .article-card {
+      @include articleCard;
+      flex-direction: column;
+
+      h3 {
+        font-size: 2.2rem;
+      }
+
+      img {
+        width: 40%;
+      }
+
+      div {
+        justify-content: center;
+      }
+
+      p {
+        font-size: 1.8rem;
       }
     }
 
@@ -73,7 +93,16 @@
 
     .article-card {
       @include articleCard;
+
       flex-direction: column;
+
+      img {
+        width: 75%;
+      }
+
+      div {
+        justify-content: space-between;
+      }
     }
   }
 
