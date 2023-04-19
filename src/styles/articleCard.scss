@@ -4,6 +4,7 @@
     background-color: $lightGreen;
     border-radius: 16px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -29,7 +30,7 @@
     }
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         padding: 10px;
 
         span {

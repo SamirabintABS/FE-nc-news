@@ -35,7 +35,7 @@
       }
 
       img {
-        width: 40%;
+        width: 60%;
       }
 
       div {
@@ -62,6 +62,26 @@
 
       }
     }
+
+    .article-card {
+      @include articleCard;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      img {
+        width: 60%;
+      }
+
+      div {
+        justify-content: center;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
   }
 
   @include tablet {
@@ -75,6 +95,26 @@
         @include articlePreview;
         width: calc(50% - 11px);
 
+      }
+    }
+
+    .article-card {
+      @include articleCard;
+
+      h3 {
+        font-size: 2rem;
+      }
+
+      img {
+        width: 50%;
+      }
+
+      div {
+        justify-content: center;
+      }
+
+      p {
+        font-size: 1.6rem;
       }
     }
   }
@@ -93,7 +133,6 @@
 
     .article-card {
       @include articleCard;
-
       flex-direction: column;
 
       img {
