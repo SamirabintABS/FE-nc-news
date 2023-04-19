@@ -1,7 +1,7 @@
 @import "./colorVariables.scss";
 
 @mixin commentsList {
-    overflow: scroll;
+    overflow: auto;
     border-radius: 16px;
     padding: 0;
     list-style: none;
