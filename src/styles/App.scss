@@ -203,16 +203,6 @@
 }
 
 // App header styles
-.app-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0 10px 0;
-  text-decoration: underline;
-  font-weight: bold;
-  font-family: 'Patua One', cursive;
-}
-
 .frog-header {
   display: flex;
   justify-content: center;
@@ -222,6 +212,11 @@
   a {
     color: black;
     background: inherit;
+  }
+
+  h1 {
+    margin-top: 10px;
+    font-weight: bold;
   }
 }
 

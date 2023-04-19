@@ -40,9 +40,11 @@ const ArticleCard = () => {
             }
             <main className="article-card" >
                 <h3>{article.title}</h3>
-                <p> <span>Author:</span> {article.author}</p>
+                <div>
+                    <p> <span>Author:</span> {article.author}</p>
+                    <p>{localDateString}</p>
+                </div>
                 <img src={article.article_img_url} alt={`snapshot relating to ${article.title}`}></img>
-                <p> <span> Created at:</span> {localDateString}</p>
                 <div>
                     <p> <span> Topic:</span> {article.topic}</p>
                     <p> <span> Votes:</span> {article.votes}</p>
