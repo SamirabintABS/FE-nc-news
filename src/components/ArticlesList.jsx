@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArticles } from "../Api";
 import ArticlePreview from "./ArticlePreview.jsx";
+import frogFace from "../images/frog-face.png"
 
 const ArticleList = () => {
     const [articles, setArticles] = useState([]);
@@ -20,10 +21,17 @@ const ArticleList = () => {
             })
     }, [])
 
-    if (isLoading) return <p>Loading...</p>
+
     if (error) return <p>Something went wrong...</p>
     return (
-        <ArticlePreview articles={articles} />
+        <>
+            {
+                isLoading && (
+                    <img className="loading-frog" src={frogFace} alt="Loading" />
+                )
+            }
+            <ArticlePreview articles={articles} />
+        </>
     )
 }
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getArticlesById } from "../Api";
 import formatDate from "../utils/utils.js";
+import frogFace from "../images/frog-face.png";
 
 const ArticleCard = () => {
     const [article, setArticle] = useState([]);
@@ -27,21 +28,27 @@ const ArticleCard = () => {
     const isoDate = article.created_at;
     const localDateString = formatDate(isoDate);
 
-    if (loading) return <p>Loading...</p>
     if (err) return <p>Something went wrong...</p>
 
     return (
-        <div className="article-card">
-            <h3>{article.title}</h3>
-            <p> <span>Author:</span> {article.author}</p>
-            <img src={article.article_img_url} alt={`snapshot relating to ${article.title}`}></img>
-            <p> <span> Created at:</span> {localDateString}</p>
-            <div>
-                <p> <span> Topic:</span> {article.topic}</p>
-                <p> <span> Votes:</span> {article.votes}</p>
+        <>
+            {
+                loading && (
+                    <img className="loading-frog" src={frogFace} alt="Loading" />
+                )
+            }
+            <div className="article-card">
+                <h3>{article.title}</h3>
+                <p> <span>Author:</span> {article.author}</p>
+                <img src={article.article_img_url} alt={`snapshot relating to ${article.title}`}></img>
+                <p> <span> Created at:</span> {localDateString}</p>
+                <div>
+                    <p> <span> Topic:</span> {article.topic}</p>
+                    <p> <span> Votes:</span> {article.votes}</p>
+                </div>
+                <p>{article.body}</p>
             </div>
-            <p>{article.body}</p>
-        </div>
+        </>
     )
 
 }

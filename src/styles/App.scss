@@ -11,6 +11,8 @@
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
   background-color: $linen;
 
   @include desktop {
@@ -203,4 +205,21 @@
 
 .standard-btn {
   @include button;
+}
+
+.loading-frog {
+  animation: spin 1s infinite linear;
+
+
+  align-items: center;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
