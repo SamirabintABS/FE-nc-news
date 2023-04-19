@@ -12,7 +12,7 @@ const ArticlePreview = ({ articles }) => {
                         <h4>Author: {article.author}</h4>
                         <h5>Topic: {article.topic}</h5>
                         <Link to={`/${article.article_id}`}>
-                            <button>Read full article</button>
+                            <button className="standard-btn">Read full article</button>
                         </Link>
                     </li>
                 )

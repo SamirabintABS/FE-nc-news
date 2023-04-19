@@ -173,6 +173,7 @@
 
     svg {
       height: 45px;
+      filter: invert(100%);
     }
   }
 }
@@ -198,4 +199,8 @@
     color: black;
     background: inherit;
   }
+}
+
+.standard-btn {
+  @include button;
 }
