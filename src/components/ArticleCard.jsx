@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getArticlesById } from "../Api";
+import { getArticlesById } from "../utils/Api.js";
 import formatDate from "../utils/utils.js";
 import frogFace from "../images/frog-face.png";
 import CommentsList from "./CommentsList";

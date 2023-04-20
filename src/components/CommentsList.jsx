@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCommentsById } from "../Api";
+import { getCommentsById } from "../utils/Api";
 
 import CommentCard from "./CommentCard";
 
