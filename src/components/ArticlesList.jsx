@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getArticles } from "../Api";
+import { getArticles } from "../utils/Api";
 import ArticlePreview from "./ArticlePreview.jsx";
 import frogFace from "../images/frog-face.png"
 

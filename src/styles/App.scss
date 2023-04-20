@@ -5,6 +5,7 @@
 @import "./articleCard.scss";
 @import "./articlePreview.scss";
 @import "./articleList.scss";
+@import "./commentsList.scss";
 
 * {
   font-family: 'Patua One', cursive;
@@ -36,8 +37,12 @@
         font-size: 2.2rem;
       }
 
-      img {
-        width: 60%;
+      .text-img-container {
+        img {
+          width: 60%;
+          float: left;
+          margin-left: 20px;
+        }
       }
 
       div {
@@ -47,6 +52,11 @@
       p {
         font-size: 1.8rem;
       }
+    }
+
+    .comments-list {
+      @include commentsList;
+      height: 350px;
     }
 
   }
@@ -72,8 +82,12 @@
         font-size: 2rem;
       }
 
-      img {
-        width: 60%;
+      .text-img-container {
+        img {
+          width: 60%;
+          float: left;
+          margin-left: 20px;
+        }
       }
 
       div {
@@ -83,6 +97,11 @@
       p {
         font-size: 1.6rem;
       }
+    }
+
+    .comments-list {
+      @include commentsList;
+      height: 300px;
     }
   }
 
@@ -107,8 +126,14 @@
         font-size: 2rem;
       }
 
-      img {
-        width: 50%;
+      .text-img-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        img {
+          width: 100%;
+          float: none;
+        }
       }
 
       div {
@@ -118,6 +143,11 @@
       p {
         font-size: 1.6rem;
       }
+    }
+
+    .comments-list {
+      @include commentsList;
+      height: 250px;
     }
   }
 
@@ -137,15 +167,27 @@
       @include articleCard;
       flex-direction: column;
 
-      img {
-        width: 75%;
+      .text-img-container {
+        display: flex;
+        flex-direction: column-reverse;
+
+        img {
+          width: 100%;
+          float: none;
+        }
       }
 
       div {
         justify-content: space-between;
       }
     }
+
+    .comments-list {
+      @include commentsList;
+      height: 300px;
+    }
   }
+
 
 }
 
@@ -181,16 +223,6 @@
 }
 
 // App header styles
-.app-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0 10px 0;
-  text-decoration: underline;
-  font-weight: bold;
-  font-family: 'Patua One', cursive;
-}
-
 .frog-header {
   display: flex;
   justify-content: center;
@@ -201,6 +233,11 @@
     color: black;
     background: inherit;
   }
+
+  h1 {
+    margin-top: 10px;
+    font-weight: bold;
+  }
 }
 
 .standard-btn {
@@ -209,9 +246,6 @@
 
 .loading-frog {
   animation: spin 1s infinite linear;
-
-
-  align-items: center;
 }
 
 @keyframes spin {
