@@ -35,9 +35,9 @@ export const getCommentsById = (id) => {
         })
 }
 
-export const voteArticle = (id) => {
+export const voteArticle = (id, vote) => {
     return newsApi
-        .patch(`/articles/${id}`, { inc_votes: 1 })
+        .patch(`/articles/${id}`, { inc_votes: vote })
         .then((res) => {
             return res.data.article;
         })

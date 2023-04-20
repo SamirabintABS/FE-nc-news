@@ -9,7 +9,7 @@ const VoteButton = ({ articleId, setArticle, addedVotes, setAddedVotes }) => {
     const handleClick = () => {
         if (addedVotes === 0) {
             setAddedVotes(1);
-            api.voteArticle(id).catch(() => {
+            api.voteArticle(id, 1).catch(() => {
                 setErr("something went wrong, try again later")
                 setAddedVotes(0)
             })
@@ -34,7 +34,7 @@ const VoteButton = ({ articleId, setArticle, addedVotes, setAddedVotes }) => {
     const handleRemoveVote = () => {
         if (addedVotes === 1) {
             setAddedVotes(0)
-            api.voteArticle(id).catch(() => {
+            api.voteArticle(id, -1).catch(() => {
                 setErr("something went wrong, try again later")
                 setAddedVotes(1)
             })
