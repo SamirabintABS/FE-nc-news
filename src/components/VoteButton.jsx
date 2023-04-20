@@ -16,18 +16,6 @@ const VoteButton = ({ articleId, setArticle, addedVotes, setAddedVotes }) => {
 
         }
 
-        // None DRY way of updating article votes
-        // setArticle((currentArticle) => {
-        //     return { ...currentArticle, votes: currentArticle.votes + 1 }
-        // })
-        // api.voteArticle(id)
-        //     .then((updatedArticle) => {
-        //     }).catch(() => {
-        //         setArticle((currentArticle) => {
-        //             return { ...currentArticle, votes: currentArticle.votes - 1 }
-        //         })
-        //         setErr("something went wrong, try again later")
-        //     })
     }
 
 
@@ -45,12 +33,11 @@ const VoteButton = ({ articleId, setArticle, addedVotes, setAddedVotes }) => {
 
 
     return (
-        <div>
+        <div className='vote-buttons-container'>
             <button onClick={handleClick} aria-label="Vote for this article" className="secondary-btn">Vote!</button>
-            {err ? <p>{err}</p> : null}
+            {err && <p>{err}</p>}
 
             <button onClick={handleRemoveVote} aria-label="Remove vote for this article" className="secondary-btn">Remove Vote</button>
-
         </div>
     )
 }
