@@ -4,11 +4,13 @@ import { getArticlesById } from "../utils/Api.js";
 import formatDate from "../utils/utils.js";
 import frogFace from "../images/frog-face.png";
 import CommentsList from "./CommentsList";
+import VoteButton from "./VoteButton.jsx";
 
 const ArticleCard = () => {
     const [article, setArticle] = useState([]);
     const [err, setErr] = useState(false)
     const [loading, setLoading] = useState(true);
+    const [addedVotes, setAddedVotes] = useState(0);
 
     const articleId = useParams();
 
@@ -48,7 +50,10 @@ const ArticleCard = () => {
                     <div className="text-content">
                         <div className="votes-topics-container">
                             <p> <span> Topic:</span> {article.topic}</p>
-                            <p> <span> Votes:</span> {article.votes}</p>
+                            <p> <span> Votes:</span> {article.votes + addedVotes}</p>
+                            <VoteButton articleId={articleId} setArticle={setArticle}
+                                addedVotes={addedVotes}
+                                setAddedVotes={setAddedVotes} />
                         </div>
                         <p>{article.body}</p>
                     </div>

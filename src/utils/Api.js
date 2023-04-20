@@ -34,3 +34,11 @@ export const getCommentsById = (id) => {
             console.log(err);
         })
 }
+
+export const voteArticle = (id) => {
+    return newsApi
+        .patch(`/articles/${id}`, { inc_votes: 1 })
+        .then((res) => {
+            return res.data.article;
+        })
+}

@@ -43,6 +43,13 @@
           float: left;
           margin-left: 20px;
         }
+
+        .text-content {
+          .votes-topics-container {
+            justify-content: normal;
+            display: flex;
+          }
+        }
       }
 
       div {
@@ -240,8 +247,19 @@
   }
 }
 
-.standard-btn {
+.primary-btn {
   @include button;
+}
+
+.secondary-btn {
+  @include button;
+  background-color: $plum;
+  color: white;
+
+  &:hover {
+    background-color: $deepMagenta;
+  }
+
 }
 
 .loading-frog {

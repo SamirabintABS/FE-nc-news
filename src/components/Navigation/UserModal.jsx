@@ -10,7 +10,7 @@ const UserModal = ({ handleClose, showModal }) => {
             </Modal.Header>
             <Modal.Body>You are logged in as jessjelly!</Modal.Body>
             <Modal.Footer>
-                <button className='standard-btn' onClick={handleClose}>
+                <button className='primary-btn' onClick={handleClose}>
                     Close
                 </button>
             </Modal.Footer>
