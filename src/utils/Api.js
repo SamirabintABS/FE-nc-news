@@ -42,3 +42,11 @@ export const voteArticle = (id, vote) => {
             return res.data.article;
         })
 }
+
+export const postComment = (id, comment) => {
+    return newsApi
+        .post(`/articles/${id}/comments`, comment)
+        .then((res) => {
+            return res.data.comment
+        })
+}

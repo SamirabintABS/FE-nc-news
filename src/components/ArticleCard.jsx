@@ -49,8 +49,8 @@ const ArticleCard = () => {
                 <div className="text-img-container">
                     <div className="text-content">
                         <div className="votes-topics-container">
-                            <p> <span> Topic:</span> {article.topic}</p>
-                            <p> <span> Votes:</span> {article.votes + addedVotes}</p>
+                            <p> <span>Topic: </span> {article.topic}</p>
+                            <p> <span>Votes: </span> {article.votes + addedVotes}</p>
                             <VoteButton articleId={articleId} setArticle={setArticle}
                                 addedVotes={addedVotes}
                                 setAddedVotes={setAddedVotes} />
