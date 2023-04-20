@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCommentsById } from "../Api";
-import formatDate from "../utils/utils";
+
+import CommentCard from "./CommentCard";
 
 const CommentsList = ({ articleId }) => {
     const [err, setErr] = useState(false)
@@ -9,7 +10,7 @@ const CommentsList = ({ articleId }) => {
     useEffect(() => {
         getCommentsById(articleId.article_id)
             .then((data) => {
-                return setComments(data)
+                setComments(data)
             })
             .catch(() => {
                 setErr(true);
@@ -21,22 +22,8 @@ const CommentsList = ({ articleId }) => {
     return (
 
         <section >
-            <ul className="comments-list" >
-                <h3>Comments:</h3>
-                {
-                    comments.map((comment) => {
-                        return (
-                            <li key={comment.comment_id}>
-                                <div>
-                                    <p>{comment.author}</p>
-                                    <p>{formatDate(comment.created_at)}</p>
-                                </div>
-                                <p>{comment.body}</p>
-                                <p>Votes: {comment.votes}</p>
-                            </li>
-                        )
-                    })}
-            </ul>
+            <h3>Comments:</h3>
+            <CommentCard comments={comments} />
         </section>
     )
 }
