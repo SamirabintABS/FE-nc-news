@@ -34,7 +34,7 @@ const VoteButton = ({ articleId, setArticle, addedVotes, setAddedVotes }) => {
 
     return (
         <div className='vote-buttons-container'>
-            <button onClick={handleClick} aria-label="Vote for this article" className="secondary-btn">Vote!</button>
+            <button onClick={handleClick} aria-label="Vote for this article" className="secondary-btn">Vote</button>
             {err && <p>{err}</p>}
 
             <button onClick={handleRemoveVote} aria-label="Remove vote for this article" className="secondary-btn">Remove Vote</button>
