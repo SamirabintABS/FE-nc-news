@@ -45,9 +45,19 @@
         }
 
         .text-content {
+
           .votes-topics-container {
-            justify-content: normal;
             display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            .vote-buttons-container {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              margin-bottom: 10px;
+            }
+
           }
         }
       }
@@ -95,6 +105,20 @@
           float: left;
           margin-left: 20px;
         }
+
+        .votes-topics-container {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+
+          .vote-buttons-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-bottom: 10px;
+          }
+
+        }
       }
 
       div {
@@ -141,6 +165,13 @@
           width: 100%;
           float: none;
         }
+
+        .votes-topics-container {
+
+          .vote-buttons-container {
+            justify-content: flex-end;
+          }
+        }
       }
 
       div {
@@ -181,6 +212,14 @@
         img {
           width: 100%;
           float: none;
+        }
+
+        .votes-topics-container {
+          flex-direction: column;
+
+          .vote-buttons-container {
+            justify-content: flex-start;
+          }
         }
       }
 

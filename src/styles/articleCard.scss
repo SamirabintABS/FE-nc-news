@@ -49,6 +49,11 @@
                     display: flex;
                     gap: 10px;
                 }
+
+                .vote-buttons-container {
+                    display: flex;
+                    flex-direction: row;
+                }
             }
 
             .vote-buttons-container {
