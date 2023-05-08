@@ -9,7 +9,7 @@ Link to the [hosted version!](https://yourdailyribbit.netlify.app/)
 
 Link to my [backend repository!](https://github.com/SamirabintABS/nc-news-backend)
 
-Note: the backend API is hosted on a free web service so the news articles may take a few minutes to render when you first view the app. 
+*Note: the backend API is hosted on a free web service so the news articles may take a few minutes to render when you first view the app.*
 ## Setup
 
 If you would like to run the application locally, follow the steps below:
